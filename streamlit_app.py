@@ -48,6 +48,8 @@ st.write("Yuan Rifqy Ahmad")
 st.write("21.61.0215")
 st.write("")
 st.write("This application provides personalized song recommendations based on user input. By leveraging clustering techniques (K-Means), the system analyzes a dataset of songs and recommends similar tracks to the one specified by the user.")
+st.write("")
+st.markdown('[Download Sample Dataset](https://drive.google.com/file/d/1V1lQHUNmLT89osF1sDs57Kz_cDkI8xkq/view?usp=sharing)', unsafe_allow_html=True)
 
 # Step 1: Upload the Dataset
 st.write("## Upload Dataset")
@@ -72,7 +74,6 @@ if uploaded_file is not None:
     recommender = SpotifyRecommender(data)
 
     # Button to link to Google Drive file
-    st.markdown('[Download Sample Dataset](https://drive.google.com/file/d/1V1lQHUNmLT89osF1sDs57Kz_cDkI8xkq/view?usp=sharing)', unsafe_allow_html=True)
 
 
     # Step 2: Input for Song Title
