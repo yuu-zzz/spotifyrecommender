@@ -42,7 +42,7 @@ def normalize_column(data, col):
     min_d = data[col].min()
     data[col] = (data[col] - min_d) / (max_d - min_d)
 
-st.title('Spotify Song Recommendation System')
+st.title('Spotify Recommender')
 st.write("")
 st.write("Yuan Rifqy Ahmad")
 st.write("21.61.0215")
