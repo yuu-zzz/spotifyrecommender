@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 from sklearn.cluster import KMeans
-from tqdm import tqdm
 import warnings
 warnings.filterwarnings("ignore")
 
@@ -23,12 +22,14 @@ class SpotifyRecommender:
         
         numeric_cols = self.rec_data_.select_dtypes(include=[np.number]).columns
         
-        for _, r_song in tqdm(res_data.iterrows(), total=res_data.shape[0]):
+        progress_bar = st.progress(0)
+        for idx, (_, r_song) in enumerate(res_data.iterrows(), 1):
             dist = 0
             for col in numeric_cols:
                 dist += np.absolute(float(song[col]) - float(r_song[col]))
                 
             distances.append(dist)
+            progress_bar.progress(idx / res_data.shape[0])
         
         res_data['distance'] = distances
         res_data = res_data.sort_values('distance')
