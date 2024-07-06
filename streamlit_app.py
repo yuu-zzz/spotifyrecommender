@@ -73,9 +73,6 @@ if uploaded_file is not None:
 
     recommender = SpotifyRecommender(data)
 
-    # Button to link to Google Drive file
-
-
     # Step 2: Input for Song Title
     st.write("## Song Recommendation")
     song_title = st.text_input("Enter a song title")
