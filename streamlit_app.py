@@ -72,7 +72,7 @@ if uploaded_file is not None:
     recommender = SpotifyRecommender(data)
 
     # Button to link to Google Drive file
-st.markdown('[Download Sample Dataset](https://drive.google.com/file/d/1V1lQHUNmLT89osF1sDs57Kz_cDkI8xkq/view?usp=sharing)', unsafe_allow_html=True)
+    st.markdown('[Download Sample Dataset](https://drive.google.com/file/d/1V1lQHUNmLT89osF1sDs57Kz_cDkI8xkq/view?usp=sharing)', unsafe_allow_html=True)
 
 
     # Step 2: Input for Song Title
